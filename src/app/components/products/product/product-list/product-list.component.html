@@ -1,16 +1,29 @@
 
 <div class="card mt-5">
     <div class="card-body">
-        <h6 class="text-center"> List of Products</h6>
+        <h6 class="text-center"> Lista de Productos</h6>
         <table class="table table-sm table-hover">
+            
+            <thead class="thead-light">
+                <tr>
+                  <th scope="col">Descipción</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Ubicación</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Acciones</th>
+                 
+                </tr>
+              </thead>
+            
             <tbody>
                 <tr *ngFor="let product of productList" >
                 
+                    
                     <td>{{product.name}}</td>
                     <td>{{product.category}}</td>
                     <td>{{product.location}}</td>
                     <td>{{product.price}}</td>
-                    <td><a class="btn btn-secundary" (click)="onEdit(product)" >
+                    <td><a class="btn btn-success text-white" (click)="onEdit(product)" >
                             <i class="far fa-edit"></i>
                     </a>
                 
